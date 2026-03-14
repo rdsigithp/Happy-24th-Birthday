@@ -49,20 +49,33 @@
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-25px); }
-            60% { transform: translateY(-12px); }
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-25px);
+            }
+
+            60% {
+                transform: translateY(-12px);
+            }
         }
 
         #pesan-container {
             display: none;
             opacity: 0;
             background: rgba(255, 255, 255, 0.98);
-            padding: 15px; /* Dikecilkan */
+            padding: 25px 20px;
             border-radius: 25px;
             box-shadow: 0 15px 35px rgba(255, 77, 109, 0.2);
             width: 100%;
-            max-width: 320px; /* Dikecilkan */
+            max-width: 360px;
             max-height: 85vh;
             overflow-y: auto;
             z-index: 10;
@@ -70,13 +83,20 @@
         }
 
         @keyframes popUp {
-            0% { transform: scale(0.8); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         .pesan-text {
-            font-size: 0.8rem; /* Dikecilkan */
-            line-height: 1.4; /* Dirapatkan */
+            font-size: 1rem;
+            line-height: 1.6;
             color: #444;
             text-align: left;
         }
@@ -96,14 +116,21 @@
         }
 
         @keyframes floatUp {
-            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
         }
 
         img {
-            max-width: 100px; /* Dikecilkan */
+            max-width: 130px;
             border-radius: 15px;
-            margin-top: 10px;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -121,37 +148,44 @@
     </div>
 
     <div id="pesan-container">
-        <h1 style="font-size: 1.3rem; margin: 0 0 3px 0;">🎉 TADAAAAA! 🎉</h1>
-        <h2 style="font-size: 1.1rem; margin: 0 0 8px 0;">Happy 24th Birthday, Sayang! 💖</h2>
-
-        <div class="pesan-text">
-            <p style="margin-bottom: 3px;">Ciee udah <span class="highlight">24 tahun</span> nih sekarang! Udah makin dewasa ya, tapi heran deh kok masih aja gemesin kayak bocah TK 😜🍦</p>
-
-            <p style="margin-bottom: 3px;">Selamat bertambah umur, Sayang. Semoga na makin sukses, rezekinya lancar, sehat terus, dan yang paling penting... <b>makin sayang sama mas</b> 🤭</p>
-
-            <p style="margin-bottom: 3px;">Kurang-kurangin ya <i>prengat-prengutnya</i>, biar makin manis terus tiap hari 😅</p>
-
-            <p style="margin-bottom: 3px;">Mas beruntung masih bisa nemenin na dihari ulang tahun na yang ke <span class="highlight">24 tahun</span> ini. Semoga rencana pernikahan kita dilancarkan sampai hari H ya, cantik. Amin! 💍✨</p>
-
-            <p style="text-align: center; font-style: italic; margin-top: 8px; font-size: 0.75rem;">
+        <h1 style="font-size: 1.2rem;">🎉 TADAAAAA! 🎉</h1>
+        <h2 style="font-size: 1rem;">Happy 24th Birthday, Sayang! 💖</h2>
+    
+        <div class="pesan-text" style="font-size: 0.9rem;">
+            <p>Ciee udah <span class="highlight">24 tahun</span> nih sekarang! Udah makin dewasa ya, tapi heran deh kok
+                masih aja gemesin kayak bocah TK 😜🍦</p>
+    
+            <p>Selamat bertambah umur, Sayang. Semoga na makin sukses, rezekinya lancar, sehat terus, dan yang paling penting...
+                <b>makin sayang sama mas</b> 🤭</p>
+    
+            <p>Kurang-kurangin ya <i>prengat-prengutnya</i>, biar makin manis terus tiap hari 😅</p>
+    
+            <p>Mas beruntung masih bisa nemenin na dihari ulang tahun na yang ke <span class="highlight">24 tahun</span> ini. Semoga rencana pernikahan kita dilancarkan sampai hari H ya,
+                Cantik. Amin! 💍✨</p>
+    
+            <p style="text-align: center; font-style: italic; margin-top: 20px; font-size: 0.85rem;">
                 I love you to the moon, and back to you again 😍❣️😘
             </p>
         </div>
+    </div>
 
         <img src="https://media.giphy.com/media/l4pTfx2qLszoacZRS/giphy.gif" alt="Cute Hug">
     </div>
 
     <script>
         function bukaKado() {
+            // Memutar lagu (Trick untuk Bypass Autoplay Block di iPhone)
             var audio = document.getElementById("laguUltah");
             audio.play().catch(function (error) {
                 console.log("Autoplay dicegah oleh browser, tapi tenang sudah dihandle!");
             });
 
+            // Efek visual pindah halaman
             document.getElementById('kado-container').style.display = 'none';
             const pesan = document.getElementById('pesan-container');
             pesan.style.display = 'block';
 
+            // Jalankan animasi hujan hati & cincin
             buatHujanHati();
         }
 
