@@ -2,9 +2,9 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>HBD Sayang ke-24! 💖</title>
+    <title>hbd sayang ke-24! 💖</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -49,19 +49,12 @@
         }
 
         @keyframes bounce {
-
-            0%,
-            20%,
-            50%,
-            80%,
-            100% {
+            0%, 20%, 50%, 80%, 100% {
                 transform: translateY(0);
             }
-
             40% {
                 transform: translateY(-25px);
             }
-
             60% {
                 transform: translateY(-12px);
             }
@@ -87,7 +80,6 @@
                 transform: scale(0.8);
                 opacity: 0;
             }
-
             100% {
                 transform: scale(1);
                 opacity: 1;
@@ -120,7 +112,6 @@
                 transform: translateY(0) rotate(0deg);
                 opacity: 1;
             }
-
             100% {
                 transform: translateY(-110vh) rotate(360deg);
                 opacity: 0;
@@ -142,53 +133,47 @@
     </audio>
 
     <div id="kado-container">
-        <h1>Ada paket spesial nih buat ayang... 👀</h1>
-        <button class="kado-btn" onclick="bukaKado()">🎁</button>
-        <p style="font-weight: 600; margin-top: 15px;">(Coba ketuk kadonya!)</p>
+        <h1>ada paket spesial nih buat ayang... 👀</h1>
+        <button class="kado-btn" onclick="bukakado()">🎁</button>
+        <p style="font-weight: 600; margin-top: 15px;">(coba ketuk kadonya!)</p>
     </div>
 
     <div id="pesan-container">
-        <h1 style="font-size: 1.5rem;">🎉 TADAAAAA! 🎉</h1>
-        <h2 style="font-size: 1.2rem;">Happy 24th Birthday, Sayang! 💖</h2>
+        <h1 style="font-size: 1.5rem;">🎉 tadaaaaa! 🎉</h1>
+        <h2 style="font-size: 1.2rem;">happy 24th birthday, sayang! 💖</h2>
 
         <div class="pesan-text">
-            <p>Ciee udah <span class="highlight">24 tahun</span> nih sekarang! Udah makin dewasa ya, tapi heran deh kok
-                masih aja gemesin kayak bocah TK 😜🍦</p>
+            <p>ciee udah <span class="highlight">24 tahun</span> nih sekarang! udah makin dewasa ya, tapi heran deh kok masih aja gemesin kayak bocah tk 😜🍦</p>
 
-            <p>Selamat bertambah umur, Sayang. Semoga na makin sukses, rezekinya lancar, sehat terus, dan yang paling penting...
-                <b>makin sayang sama mas</b> 🤭</p>
+            <p>selamat bertambah umur, sayang. semoga na makin sukses, rezekinya lancar, sehat terus, dan yang paling penting... <b>makin sayang sama mas</b> 🤭</p>
 
-            <p>Kurang-kurangin ya <i>prengat-prengutnya</i>, biar makin manis terus tiap hari 😅</p>
+            <p>kurang-kurangin ya <i>prengat-prengutnya</i>, biar makin manis terus tiap hari 😅</p>
 
-            <p>Mas beruntung masih bisa nemenin na dihari ulang tahun na yang ke <span class="highlight">24 tahun</span> ini. Semoga rencana pernikahan kita dilancarkan sampai hari H ya,
-                Cantik. Amin! 💍✨</p>
+            <p>mas beruntung masih bisa nemenin na dihari ulang tahun na yang ke <span class="highlight">24 tahun</span> ini. semoga rencana pernikahan kita dilancarkan sampai hari h ya, cantik. amin! 💍✨</p>
 
             <p style="text-align: center; font-style: italic; margin-top: 20px;">
-                I love you to the moon, and back to you again 😍❣️😘
+                i love you to the moon, and back to you again 😍❣️😘
             </p>
         </div>
 
-        <img src="https://media.giphy.com/media/l4pTfx2qLszoacZRS/giphy.gif" alt="Cute Hug">
+        <img src="https://media.giphy.com/media/l4pTfx2qLszoacZRS/giphy.gif" alt="cute hug">
     </div>
 
     <script>
-        function bukaKado() {
-            // Memutar lagu (Trick untuk Bypass Autoplay Block di iPhone)
+        function bukakado() {
             var audio = document.getElementById("laguUltah");
             audio.play().catch(function (error) {
-                console.log("Autoplay dicegah oleh browser, tapi tenang sudah dihandle!");
+                console.log("audio play blocked");
             });
 
-            // Efek visual pindah halaman
             document.getElementById('kado-container').style.display = 'none';
             const pesan = document.getElementById('pesan-container');
             pesan.style.display = 'block';
 
-            // Jalankan animasi hujan hati & cincin
-            buatHujanHati();
+            buathujanhati();
         }
 
-        function buatHujanHati() {
+        function buathujanhati() {
             const emojis = ['💖', '💕', '🥰', '✨', '💍', '🌸'];
             setInterval(() => {
                 const heart = document.createElement('div');
